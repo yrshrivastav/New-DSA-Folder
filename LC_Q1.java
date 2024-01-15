@@ -1,8 +1,4 @@
-import java.util.Arrays;
-
 public class LC_Q1{
-
-
 
     public static void merge(int[] num1, int m, int[] num2, int n) {
         
@@ -25,7 +21,27 @@ public class LC_Q1{
         }
 
         num1=num3;
-        Arrays.sort(num1);
+
+        for(int index=0; index<m; index++){
+            if(num1[index]==0){
+                continue;
+            }
+            else{
+                for(int j=index+1; j<m; j++){
+                    if(num1[j]==0){
+                        continue;
+                    }
+                    else{
+                        if(num1[index]>num1[j]){
+                        int temp=num1[index];
+                        num1[index]=num1[j];
+                        num1[j]=temp;
+                        }
+                    }    
+                }
+            }
+        }
+
         for(int no3 : num1){
             if(no3==0){
                 continue;
@@ -33,7 +49,6 @@ public class LC_Q1{
             else{
                 System.out.println("Numbes in num1 array are : "+no3);
             }
-           
         }
     }
 
