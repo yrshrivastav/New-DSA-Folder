@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class LC_Q1{
 
 
@@ -23,6 +25,7 @@ public class LC_Q1{
         }
 
         num1=num3;
+        Arrays.sort(num1);
         for(int no3 : num1){
             if(no3==0){
                 continue;
@@ -36,8 +39,8 @@ public class LC_Q1{
 
     public static void main(String[] args) {
         
-        int num1[] = {1,2,3,4,0,0,0};
-        int num2[] = {5,6};
+        int num1[] = {1,2,7,4,0,0,0};
+        int num2[] = {3,4};
     
         int m = num1.length;
         int n = num2.length;
