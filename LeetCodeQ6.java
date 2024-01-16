@@ -2,16 +2,14 @@ public class LeetCodeQ6 {
     
     public static void rotate(int[] nums, int k) {
         int size = nums.length;
-        int length = size-1;
-        // int condition = size-k;
         
-        for (int i = 1; i<size-k; i++)
+        for (int i = 0; i<k; i++)
 		{
-            int j = length;
-			int temp = nums[length];
-                for(int index = length; index > 0 ; index--){
-                    nums[j] = nums[j-1];
-                    j--;
+            int length = size-1;
+			int temp = nums[size-1];
+                for(int j = size-1; j > 0 ; j--){
+                    nums[length] = nums[length-1];
+                    length--;
                 }
             nums[0] = temp;
 		}
@@ -22,11 +20,15 @@ public class LeetCodeQ6 {
     }
 
     public static void main(String[] args) {
-		
+		//Example1
         int[] nums = {1,2,3,4,5,6,7};
-        int k = 3;
-
+        int k = 2;
         rotate(nums, k);
+        
+        //Example2
+        // int[] nums1 = {-1,-100,3,99};
+        // int k1 = 2;
+        // rotate(nums1, k1);
 	}
 
 }
