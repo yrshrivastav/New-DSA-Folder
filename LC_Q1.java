@@ -6,22 +6,28 @@ public class LC_Q1{
         int size = m + n;
         int i = 0;
         int num3[] = new int[size];
-        for(int no1 : num1){
-            if(no1==0){
+        for(int element : num1){
+            if(element==0){
                 continue;
             }
             else{
-                num3[i] = no1;
+                num3[i] = element;
                 i++;
             }
         }
         for(int no2 : num2){
-            num3[i] = no2;
-            i++;
+            if(no2==0){
+                continue;
+            }
+            else{
+                num3[i] = no2;
+                i++;
+            }
         }
 
         num1=num3;
 
+        //sorting array
         for(int index=0; index<m; index++){
             if(num1[index]==0){
                 continue;
