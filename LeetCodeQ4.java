@@ -21,6 +21,7 @@ public class LeetCodeQ4 {
                 a=nums[i];
                 i--;
             }
+            
         }
 
         for (int i=0;i<count;i++) {
